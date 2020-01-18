@@ -30,7 +30,7 @@ echo ""
 echo "- Instalasi Selesai..."
 sleep 2
 fi
-echo "#_MEMULAI INSTALLASI DATA BYPASS Suporter GLOBAL [Version 1]"
+echo "#_MEMULAI INSTALLASI DATA BYPASS Support GLOBAL [Version 1]"
 echo ""
 echo ""
 sleep 1
@@ -187,21 +187,6 @@ if [ -f "/sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/Sh
 then
 rm -rf /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/game_patch_0.16.0.11462.pak
 fi
-rm -rf /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/puffer_res.eifs
-rm -rf /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/filelist.json
-mv /sdcard/Android/data/spjk.vip.data/Global/bDATA/puffer_res.eifs /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks
-mv /sdcard/Android/data/spjk.vip.data/Global/bDATA/filelist.json /sdcard/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks
-}
-
-clear()
-{
-echo ""
-echo "×××××××× [Menghapus Record Files] ××××××××"
-rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/apollo_reslist.flist
-rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/filelist.json
-rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/apollo_reslist.flistnewlist
-rm -rf /storage/emulated/0/Android/data/com.tencent.ig/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/new.filelist
-echo "® RECORD FILES DELETED━━━━SPJK━━━━��"
 }
 
 moddata()
@@ -217,8 +202,8 @@ rndata
 
 instal
 echo ""
-echo "√••••••••[START Suport V1 Season11 v_0.16.5]•••••••••••••••••••••••••••••••••"
-echo "[ VIP PUBG MOBILE GLOBAL BYPASS Suport V1]"
+echo "√••••••••[START Support V1 Season11 v_0.16.5]•••••••••••••••••••••••••••••••••"
+echo "[ VIP PUBG MOBILE GLOBAL BYPASS Support V1]"
 sleep 1
 echo "[ Power By @admsprojecthack ]"
 echo "[ TELEGRAM: https://t.me/spjkchannel ]"
@@ -331,8 +316,9 @@ echo " ××××××××× [SALAM SPJK] ××××××××× "
 echo "√••••••••[END]••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••"
 exit
 else
-clear
+echo "Playing PUBG MOBILE GLOBAL......"
+echo "Don't Close BYPASS... !!!"
 echo ""
-sleep 10s
+sleep 1s
 fi
 done
