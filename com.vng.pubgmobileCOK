@@ -1,0 +1,338 @@
+instal()
+{
+if [ -d "/sdcard/Android/data/spjk.vip.data" ]
+then
+rm -rf /sdcard/Android/data/spjk.vip.data
+fi
+if [ ! -d "/data/data/com.vng.pubgmobile" ];
+then
+echo "- PUBGM VIETNAM Tidak Terinstall"
+echo "- Silahkan Install Terlebih Dahulu Apk PUBG VIETNAM 0.16.5"
+exit 0;
+fi
+if [ ! -f "/sdcard/Android/data/com.vng.pubgmobile/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/game_patch_0.16.0.11466.pak" ];
+then
+echo "- Versi PUBG Tidak Sama dengan Versi Bypass"
+echo "- Silahkan Update Versi PUBG ke 0.16.5  yang Terbaru..."
+echo "- Dan Jika masalah masih muncul silahkan hubungi admin"
+echo "- Telegram: @admsprojecthack"
+exit 0;
+fi
+if [ ! -f "/data/data/com.vng.pubgmobile/lib/libUE4.so" ];
+then
+echo "- Terjadi corupt pada file PUBGM VIETNAM "
+sleep 1
+echo "- Untuk mangatasi masalah ini ..."
+echo "- Bypas spjk akan menginstall otomatis base.apk"
+echo "- Tunggu Sebentar...."
+pm install -r /data/app/com.vng.pubgmobile*/base.apk
+echo ""
+echo "- Instalasi Selesai..."
+sleep 2
+fi
+echo "#_MEMULAI INSTALLASI DATA BYPASS Suporter VIETNAM [Version 1]"
+echo ""
+echo ""
+sleep 1
+echo "Ini mungkin membutuhkan waktu lumayan lama ya cuyy.."
+sleep 1
+echo "Tergantung Kecepatan Koneksi Internet Kalian.."
+echo ""
+echo ""
+mount -o rw,remount /system
+mkdir /sdcard/Android/data/spjk.vip.data
+mkdir /sdcard/Android/data/spjk.vip.data/VIETNAM
+mkdir /sdcard/Android/data/spjk.vip.data/VIETNAM/bDATA
+mkdir /sdcard/Android/data/spjk.vip.data/VIETNAM/bLIB
+cp -R /data/data/com.vng.pubgmobile/lib/* /sdcard/Android/data/spjk.vip.data/VIETNAM/bLIB
+sleep 1
+wget https://raw.githubusercontent.com/nggandenltd/bypasspatch/master/patchfilespjkv0165
+wget https://raw.githubusercontent.com/nggandenltd/bypasspatch/master/patchfilespjkv0160
+wget https://raw.githubusercontent.com/nggandenltd/bypasspatch/master/bps3.spjk
+wget https://raw.githubusercontent.com/nggandenltd/bypasspatch/master/bps4.spjk
+mv bps3.spjk data3spjk
+mv bps4.spjk data4spjk
+sleep 1
+mv data3spjk /sdcard/Android/data/spjk.vip.data/VIETNAM
+mv data4spjk /sdcard/Android/data/spjk.vip.data/VIETNAM
+mv patchfilespjkv0160 /sdcard/Android/data/spjk.vip.data/VIETNAM
+mv patchfilespjkv0165 /sdcard/Android/data/spjk.vip.data/VIETNAM
+sleep 1
+if [ ! -f "/sdcard/Android/data/spjk.vip.data/VIETNAM/data3spjk" ];
+then
+echo ""
+echo "Installasi Gagal"
+echo "Data Tidak ditemukan, silahkan unduh ulang file"
+echo "Atau hubungi admin @admsprojecthack"
+exit 0;
+fi
+if [ ! -f "/sdcard/Android/data/spjk.vip.data/VIETNAM/data4spjk" ];
+then
+echo ""
+echo "Installasi Gagal"
+echo "Data Tidak ditemukan, silahkan unduh ulang file"
+echo "Atau hubungi admin @admsprojecthack"
+exit 0;
+fi
+if [ ! -f "/sdcard/Android/data/spjk.vip.data/VIETNAM/patchfilespjkv0160" ];
+then
+echo ""
+echo "Installasi Gagal"
+echo "Data Tidak ditemukan, silahkan unduh ulang file"
+echo "Atau hubungi admin @admsprojecthack"
+exit 0;
+fi
+if [ ! -f "/sdcard/Android/data/spjk.vip.data/VIETNAM/patchfilespjkv0165" ];
+then
+echo ""
+echo "Installasi Gagal"
+echo "Data Tidak ditemukan, silahkan unduh ulang file"
+echo "Atau hubungi admin @admsprojecthack"
+exit 0;
+fi
+echo "Installasi Selesai"
+}
+
+urdata()
+{
+mv /sdcard/Android/data/spjk.vip.data/VIETNAM/patchfilespjkv0160 /sdcard/Android/data/spjk.vip.data/VIETNAM/game_patch_0.16.0.11462.pak
+mv /sdcard/Android/data/spjk.vip.data/VIETNAM/patchfilespjkv0165 /sdcard/Android/data/spjk.vip.data/VIETNAM/game_patch_0.16.5.11560.pak
+mv /sdcard/Android/data/spjk.vip.data/VIETNAM/data3spjk /sdcard/Android/data/spjk.vip.data/VIETNAM/puffer_res.eifs
+mv /sdcard/Android/data/spjk.vip.data/VIETNAM/data4spjk /sdcard/Android/data/spjk.vip.data/VIETNAM/PufferFileList.json
+}
+
+rndata()
+{
+mv /sdcard/Android/data/spjk.vip.data/VIETNAM/game_patch_0.16.0.11462.pak /sdcard/Android/data/spjk.vip.data/VIETNAM/patchfilespjkv0160
+mv /sdcard/Android/data/spjk.vip.data/VIETNAM/game_patch_0.16.5.11560.pak /sdcard/Android/data/spjk.vip.data/VIETNAM/patchfilespjkv0165
+mv /sdcard/Android/data/spjk.vip.data/VIETNAM/puffer_res.eifs /sdcard/Android/data/spjk.vip.data/VIETNAM/data3spjk
+mv /sdcard/Android/data/spjk.vip.data/VIETNAM/PufferFileList.json /sdcard/Android/data/spjk.vip.data/VIETNAM/data4spjk
+}
+
+bypass()
+{
+urdata
+cp -R /sdcard/Android/data/spjk.vip.data/VIETNAM/game_patch_0.16.5.11560.pak /sdcard/Android/data/com.vng.pubgmobile/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks
+cp -R /sdcard/Android/data/spjk.vip.data/VIETNAM/game_patch_0.16.0.11462.pak /sdcard/Android/data/com.vng.pubgmobile/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks
+rndata
+}
+
+modstart()
+{
+chmod -R 000 /data/data/com.vng.pubgmobile/files/tss_tmp/comm.dat
+chmod -R 000 /data/data/com.vng.pubgmobile/files/tss_tmp/config2.xml.b99a2eec
+chmod -R 000 /data/data/com.vng.pubgmobile/files/tss_tmp/config3.xml
+chmod -R 000 /data/data/com.vng.pubgmobile/files/tss_tmp/gp4.ano.dat
+chmod -R 000 /data/data/com.vng.pubgmobile/files/tss_tmp/mn_cache.dat
+chmod -R 000 /data/data/com.vng.pubgmobile/files/tss_tmp/mrpcs.data
+chmod -R 000 /data/data/com.vng.pubgmobile/files/tss_tmp/tss.ano.dat
+chmod -R 000 /data/data/com.vng.pubgmobile/files/tss_tmp/tss_base.dat
+chmod -R 000 /data/data/com.vng.pubgmobile/files/tss_tmp/tss_cef.dat
+chmod -R 000 /data/data/com.vng.pubgmobile/files/tss_tmp/tss_cfg2.dat
+chmod -R 000 /data/data/com.vng.pubgmobile/files/tss_tmp/tss_emu_c2.dat
+chmod -R 000 /data/data/com.vng.pubgmobile/files/tss_tmp/tss_lcp.dat
+chmod -R 000 /data/data/com.vng.pubgmobile/files/tss_tmp/tss_r_record.dat
+chmod -R 000 /data/data/com.vng.pubgmobile/files/tss_tmp/tss_shp_tmp.dat
+chmod -R 000 /data/data/com.vng.pubgmobile/files/tss_tmp/tssmua.zip
+chmod -R 000 /data/data/com.vng.pubgmobile/files/hawk_data
+chmod -R 000 /data/data/com.vng.pubgmobile/databases/__hs__db_issues
+chmod -R 000 /data/data/com.vng.pubgmobile/databases/__hs__db_key_values
+chmod -R 000 /data/data/com.vng.pubgmobile/databases/__hs__db_properties
+chmod -R 000 /data/data/com.vng.pubgmobile/databases/__hs_db_helpshift_users
+chmod -R 000 /data/data/com.vng.pubgmobile/databases/__hs__db_support_key_values
+chmod -R 000 /data/data/com.vng.pubgmobile/databases/__hs_db_helpshift_users
+chmod -R 000 /data/data/com.vng.pubgmobile/databases/__hs__db_sessions
+chmod -R 000 /data/data/com.vng.pubgmobile/databases/__hs_log_store
+chmod -R 000 /data/data/com.vng.pubgmobile/databases/tdm.db
+chmod -R 000 /data/data/com.vng.pubgmobile/databases/bugly_db_
+chmod -R 000 /data/data/com.vng.pubgmobile/databases/config.db
+chmod -R 000 /data/data/com.vng.pubgmobile/databases/iMSDK.db
+}
+
+repair()
+{
+chmod -R 600 /data/data/com.vng.pubgmobile/files/tss_tmp/comm.dat
+chmod -R 600 /data/data/com.vng.pubgmobile/files/tss_tmp/config2.xml.b99a2eec
+chmod -R 600 /data/data/com.vng.pubgmobile/files/tss_tmp/config3.xml
+chmod -R 600 /data/data/com.vng.pubgmobile/files/tss_tmp/gp4.ano.dat
+chmod -R 600 /data/data/com.vng.pubgmobile/files/tss_tmp/mn_cache.dat
+chmod -R 600 /data/data/com.vng.pubgmobile/files/tss_tmp/mrpcs.data
+chmod -R 600 /data/data/com.vng.pubgmobile/files/tss_tmp/tss.ano.dat
+chmod -R 600 /data/data/com.vng.pubgmobile/files/tss_tmp/tss_base.dat
+chmod -R 600 /data/data/com.vng.pubgmobile/files/tss_tmp/tss_cef.dat
+chmod -R 600 /data/data/com.vng.pubgmobile/files/tss_tmp/tss_cfg2.dat
+chmod -R 600 /data/data/com.vng.pubgmobile/files/tss_tmp/tss_emu_c2.dat
+chmod -R 600 /data/data/com.vng.pubgmobile/files/tss_tmp/tss_lcp.dat
+chmod -R 600 /data/data/com.vng.pubgmobile/files/tss_tmp/tss_r_record.dat
+chmod -R 600 /data/data/com.vng.pubgmobile/files/tss_tmp/tss_shp_tmp.dat
+chmod -R 600 /data/data/com.vng.pubgmobile/files/tss_tmp/tssmua.zip
+chmod -R 777 /data/data/com.vng.pubgmobile/files/hawk_data
+chmod -R 660 /data/data/com.vng.pubgmobile/databases/__hs__db_issues
+chmod -R 660 /data/data/com.vng.pubgmobile/databases/__hs__db_key_values
+chmod -R 660 /data/data/com.vng.pubgmobile/databases/__hs__db_properties
+chmod -R 660 /data/data/com.vng.pubgmobile/databases/__hs_db_helpshift_users
+chmod -R 660 /data/data/com.vng.pubgmobile/databases/__hs__db_support_key_values
+chmod -R 660 /data/data/com.vng.pubgmobile/databases/__hs_db_helpshift_users
+chmod -R 660 /data/data/com.vng.pubgmobile/databases/__hs__db_sessions
+chmod -R 660 /data/data/com.vng.pubgmobile/databases/__hs_log_store
+chmod -R 660 /data/data/com.vng.pubgmobile/databases/tdm.db
+chmod -R 660 /data/data/com.vng.pubgmobile/databases/bugly_db_
+chmod -R 660 /data/data/com.vng.pubgmobile/databases/config.db
+chmod -R 660 /data/data/com.vng.pubgmobile/databases/iMSDK.db
+if [ -f "/sdcard/Android/data/com.vng.pubgmobile/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/game_patch_0.16.5.11560.pak" ];
+then
+rm -rf /sdcard/Android/data/com.vng.pubgmobile/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/game_patch_0.16.5.11560.pak
+fi
+if [ -f "/sdcard/Android/data/com.vng.pubgmobile/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/game_patch_0.16.0.11462.pak" ];
+then
+rm -rf /sdcard/Android/data/com.vng.pubgmobile/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/game_patch_0.16.0.11462.pak
+fi
+rm -rf /sdcard/Android/data/com.vng.pubgmobile/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/puffer_res.eifs
+rm -rf /sdcard/Android/data/com.vng.pubgmobile/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/filelist.json
+mv /sdcard/Android/data/spjk.vip.data/VIETNAM/bDATA/puffer_res.eifs /sdcard/Android/data/com.vng.pubgmobile/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks
+mv /sdcard/Android/data/spjk.vip.data/VIETNAM/bDATA/filelist.json /sdcard/Android/data/com.vng.pubgmobile/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks
+}
+
+clear()
+{
+echo ""
+echo "×××××××× [Menghapus Record Files] ××××××××"
+rm -rf /storage/emulated/0/Android/data/com.vng.pubgmobile/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/apollo_reslist.flist
+rm -rf /storage/emulated/0/Android/data/com.vng.pubgmobile/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/filelist.json
+rm -rf /storage/emulated/0/Android/data/com.vng.pubgmobile/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/apollo_reslist.flistnewlist
+rm -rf /storage/emulated/0/Android/data/com.vng.pubgmobile/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/new.filelist
+echo "® RECORD FILES DELETED━━━━SPJK━━━━��"
+}
+
+moddata()
+{
+mv /sdcard/Android/data/com.vng.pubgmobile/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/puffer_res.eifs /sdcard/Android/data/spjk.vip.data/VIETNAM/bDATA
+mv /sdcard/Android/data/com.vng.pubgmobile/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/PufferFileList.json /sdcard/Android/data/spjk.vip.data/VIETNAM/bDATA
+urdata
+cp -R /sdcard/Android/data/spjk.vip.data/VIETNAM/puffer_res.eifs /sdcard/Android/data/com.vng.pubgmobile/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks
+cp -R /sdcard/Android/data/spjk.vip.data/VIETNAM/PufferFileList.json /sdcard/Android/data/com.vng.pubgmobile/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks
+rndata
+}
+
+
+instal
+echo ""
+echo "√••••••••[START Suport V1 Season11 v_0.16.5]•••••••••••••••••••••••••••••••••"
+echo "[ VIP PUBG MOBILE VIETNAM BYPASS Suport V1]"
+sleep 1
+echo "[ Power By @admsprojecthack ]"
+echo "[ TELEGRAM: https://t.me/spjkchannel ]"
+sleep 1
+echo " "
+echo "SCANNING DATA....."
+sleep 2
+if [ ! -d "/sdcard/Android/data/spjk.vip.data" ];
+then
+echo "_Maaf Data Bypass Tidak Terinstall"
+echo "_Anda Tidak Bisa Mengunakan Bypass Ini ....."
+echo "√••••••••[END]••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••"
+exit 0;
+fi
+sleep 1
+echo "_Memulihkan Data"
+chmod -R 600 /data/data/com.vng.pubgmobile/files/tss_tmp/comm.dat
+chmod -R 600 /data/data/com.vng.pubgmobile/files/tss_tmp/config2.xml.b99a2eec
+chmod -R 600 /data/data/com.vng.pubgmobile/files/tss_tmp/config3.xml
+chmod -R 600 /data/data/com.vng.pubgmobile/files/tss_tmp/gp4.ano.dat
+chmod -R 600 /data/data/com.vng.pubgmobile/files/tss_tmp/mn_cache.dat
+chmod -R 600 /data/data/com.vng.pubgmobile/files/tss_tmp/mrpcs.data
+chmod -R 600 /data/data/com.vng.pubgmobile/files/tss_tmp/tss.ano.dat
+chmod -R 600 /data/data/com.vng.pubgmobile/files/tss_tmp/tss_base.dat
+chmod -R 600 /data/data/com.vng.pubgmobile/files/tss_tmp/tss_cef.dat
+chmod -R 600 /data/data/com.vng.pubgmobile/files/tss_tmp/tss_cfg2.dat
+chmod -R 600 /data/data/com.vng.pubgmobile/files/tss_tmp/tss_emu_c2.dat
+chmod -R 600 /data/data/com.vng.pubgmobile/files/tss_tmp/tss_lcp.dat
+chmod -R 600 /data/data/com.vng.pubgmobile/files/tss_tmp/tss_r_record.dat
+chmod -R 600 /data/data/com.vng.pubgmobile/files/tss_tmp/tss_shp_tmp.dat
+chmod -R 600 /data/data/com.vng.pubgmobile/files/tss_tmp/tssmua.zip
+chmod -R 777 /data/data/com.vng.pubgmobile/files/hawk_data
+chmod -R 660 /data/data/com.vng.pubgmobile/databases/__hs__db_issues
+chmod -R 660 /data/data/com.vng.pubgmobile/databases/__hs__db_key_values
+chmod -R 660 /data/data/com.vng.pubgmobile/databases/__hs__db_properties
+chmod -R 660 /data/data/com.vng.pubgmobile/databases/__hs_db_helpshift_users
+chmod -R 660 /data/data/com.vng.pubgmobile/databases/__hs__db_support_key_values
+chmod -R 660 /data/data/com.vng.pubgmobile/databases/__hs_db_helpshift_users
+chmod -R 660 /data/data/com.vng.pubgmobile/databases/__hs__db_sessions
+chmod -R 660 /data/data/com.vng.pubgmobile/databases/__hs_log_store
+chmod -R 660 /data/data/com.vng.pubgmobile/databases/tdm.db
+chmod -R 660 /data/data/com.vng.pubgmobile/databases/bugly_db_
+chmod -R 660 /data/data/com.vng.pubgmobile/databases/config.db
+chmod -R 660 /data/data/com.vng.pubgmobile/databases/iMSDK.db
+if [ -f "/sdcard/Android/data/com.vng.pubgmobile/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/game_patch_0.16.5.11560.pak" ];
+then
+rm -rf /sdcard/Android/data/com.vng.pubgmobile/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/game_patch_0.16.5.11560.pak
+fi
+if [ -f "/sdcard/Android/data/com.vng.pubgmobile/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/game_patch_0.16.0.11462.pak" ];
+then
+rm -rf /sdcard/Android/data/com.vng.pubgmobile/files/UE4Game/ShadowTrackerExtra/ShadowTrackerExtra/Saved/Paks/game_patch_0.16.0.11462.pak
+fi
+sleep 1
+echo "_Data Telah Pulih"
+sleep 1
+echo "_Memulai Bypass PUBGM VIETNAM"
+sleep 1
+echo "_Tunggu Sebentar…"
+bypass
+sleep 1
+echo ""
+echo "_________×[RULESS]×_________"
+echo ""
+echo "___[] FITUR SAFE"
+echo "[1]. Wallhack & Collor"
+echo "[2]. Less Recoil"
+echo "[3]. Magic Bullet & Headshot"
+echo "_[] Jangan Gunakan fitur selain diatas"
+echo "_[] Jika kalian benar benar ingin Push RANK !!"
+echo "_[] Silahkan Loginkan dulu ke akun Guest"
+echo "_[] Test TDM 1 Match Untuk memastikan Bypass aktif"
+echo "_[] Karena Metode Bypass Sangat Sesitif !"
+sleep 2
+echo ""
+echo "_____BACA DULU DIATAS !!!"
+echo ""
+sleep 10
+echo "×_____[Starting SPJK Game Guardian...]\n"
+sleep 1
+am start -n com.erxjs/com.erxjs.MainActivity
+sleep 2
+am start -n bin.mt.plus/bin.mt.plus.Main
+sleep 2
+echo "_Memulai Game PUBGM VIETNAM"
+sleep 2
+am start -n com.vng.pubgmobile/com.epicgames.ue4.SplashActivity
+sleep 7
+modstart
+sleep 80
+moddata
+echo ""
+echo ""
+echo ""
+echo ""
+echo ""
+while true
+do
+if [ ! $(pidof "com.vng.pubgmobile") ]; then
+am start -n bin.mt.plus/bin.mt.plus.Main
+sleep 1
+echo "_PUBGM TELAH BERHENTI"
+sleep 1
+echo "_Menutup Game Guardian"
+am force-stop com.erxjs
+repair
+sleep 1
+rm -rf /sdcard/Android/data/spjk.vip.data
+echo " Log's & Patch Repaired "
+echo " ××××××××× [SALAM SPJK] ××××××××× "
+echo "√••••••••[END]••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••"
+exit
+else
+clear
+echo ""
+sleep 10s
+fi
+done
