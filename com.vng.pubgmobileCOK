@@ -319,6 +319,6 @@ else
 echo "Playing PUBG MOBILE VIETNAM......"
 echo "Don't Close BYPASS... !!!"
 echo ""
-sleep 1s
+sleep 10s
 fi
 done
